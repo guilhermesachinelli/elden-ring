@@ -21,13 +21,14 @@ export default function eldenClasses() {
             }
         };
         classesFetch();
-    },[]);
+    }, []);
     return (
         <div className={styles.bckg}>
             <Header />
             <h1 className={styles.centralizedText}>Classes</h1>
             <div className={styles.dualdiv}>
                 {
+
                 dadosApi ? (
                     dadosApi.data.map((classes) => (
                     <div key={classes.id} className={styles.redcard}>
@@ -92,6 +93,7 @@ export default function eldenClasses() {
                     />
                 )
             }
+
             </div>
             <Footer />
         </div>
