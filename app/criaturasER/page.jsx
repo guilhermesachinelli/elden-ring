@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from "react"
-import criaturas from "../data/criaturasER";
+import criaturas from "@/data/criaturasER";
 import styles from "@/app/criaturasER/criaturas.module.css"
 
 function page() {
