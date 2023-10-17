@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import styles from './armors.module.css';
 import eldenBoss from '@/data/eldenRing';
 export default function Armor() {
     const [data, setData] = useState('');
@@ -16,23 +17,25 @@ export default function Armor() {
         bossFecth();
     }, []);
     return (
-        <div>
-            {
-                data ? (
-                    data.data.map((boss) => (
-                        <div key={boss.id}>
-                            <h1>{boss.name}</h1>
-                            <p>{boss.description}</p>
-                            <p>{boss.type}</p>
-                            <img src={boss.image} alt={boss.name} />
-                        </div>
-                    ))
-                ) : (
-                    <div>
-                        <h1>Carregando...</h1>
-                    </div >
-                )
-            }
+        <div className={styles.container}>
+            <div className={styles.dualdiv}>
+                {
+                    data ? (
+                        data.data.map((boss) => (
+                            <div key={boss.id} className={styles.redcard}>
+                                <h1 className={styles.centralizedText}>{boss.name}</h1>
+                                <p>{boss.description}</p>
+                                <p>{boss.type}</p>
+                                <img src={boss.image} alt={boss.name}  className={styles.image} width={250} />
+                            </div>
+                        ))
+                    ) : (
+                        <div>
+                            <h1>Carregando...</h1>
+                        </div >
+                    )
+                }
+            </div>
         </div >
     )
 }
