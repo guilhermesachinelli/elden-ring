@@ -8,6 +8,7 @@ const Header = () => {
             <NavLink rota={'/'} text={'Home'} />
             <NavLink rota={'/eldenclasses'} text={'Clases'} />
             <NavLink rota={'/armor'} text={'Armaduras'} />
+            <NavLink rota={'/chefes'} text={'Bosses'} />
         </div>
     )
 }
