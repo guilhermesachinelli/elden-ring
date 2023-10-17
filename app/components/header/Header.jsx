@@ -7,7 +7,8 @@ const Header = () => {
         <div className={styles.header}>
             <NavLink rota={'/'} text={'Home'} />
             <NavLink rota={'/eldenclasses'} text={'Clases'} />
-            <NavLink rota={'/armoer'} text={'Armaduras'} />
+            <NavLink rota={'/armor'} text={'Armaduras'} />
+            <NavLink rota={'/chefes'} text={'Bosses'} />
         </div>
     )
 }
