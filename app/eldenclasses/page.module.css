@@ -1,10 +1,10 @@
-.bckg{
+.bckg {
     background-color: #000;
     height: 100%;
     width: 100%;
-  }
-  
-  .box{
+}
+
+.box {
     background-color: #f4f4f4;
     width: 50%;
     height: 100%;
@@ -14,38 +14,65 @@
     padding: 20px;
     box-shadow: 0 0 10px #000;
     margin-bottom: 20px;
-  }
-  
-.redcard{
+}
+
+.redcard {
     background-color: #222222b0;
     width: 40%;
-    height: 100%;
+    height: 84vh;
     margin: 0 auto;
     margin-top: 5%;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 15px #888585;
-  }
-  
-  .centralizedText{
+}
+
+.centralizedText {
     text-align: center;
     color: #AB966F;
     margin-bottom: 10px;
     border-bottom: 3px solid #ab966f;
-  }
-  
-  .image{
+}
+
+.image {
     align-items: center;
     justify-content: center;
     display: flex;
     margin: 0 auto;
     border-radius: 10px;
     margin-bottom: 20px;
-  }
-  
-  .dualdiv{
+    box-shadow: 0 0 15px #2d2d2d;
+}
+
+.dualdiv {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-  }
-  
+}
+
+.statusarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whitetext {
+    color: #fff;
+}
+
+.tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    background-color: #32323222;
+}
+
+.tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.table {
+    width: 50%;
+    margin-bottom: 10px;
+}
