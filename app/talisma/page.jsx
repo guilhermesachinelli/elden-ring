@@ -37,9 +37,8 @@ function page() {
                         <div className={styles.text}>
                             <p>{agente.description}</p>
                         </div>
-                        <div className={styles.effect}>
+                        <p>{agente.effect}</p>
                         </div>
-                    </div>
                 ))
             ) : (
                 <p>Carregando API...</p>

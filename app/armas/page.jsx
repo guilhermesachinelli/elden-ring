@@ -26,8 +26,7 @@ function page() {
             {dadosApi ? (
                 dadosApi.data.map((agente) => (
                     <div
-                        key={agente.id} className={styles.box}
-                    >
+                        key={agente.id} className={styles.box}>
                         <div className={styles.title}>
                             <h2>{agente.name}</h2>
                         </div>
@@ -37,7 +36,8 @@ function page() {
                         <div className={styles.text}>
                             <p>{agente.description}</p>
                         </div>
-                        <div className={styles.attack}>
+                        <div>
+                        <p>{agente.attack}</p>
                         </div>
                     </div>
                 ))
