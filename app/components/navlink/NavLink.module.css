@@ -1,0 +1,23 @@
+.linkbtn{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #a4a4a4;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.linkbtn:hover{
+    background-color: #f4f4f4;
+    border: 1px solid #5b5b5b;
+    color: #5b5b5b;
+}
