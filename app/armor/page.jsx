@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import styles from './armors.module.css';
 import eldenBoss from '@/data/eldenRing';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 export default function Armor() {
     const [data, setData] = useState('');
     useEffect(() => {
@@ -18,6 +20,7 @@ export default function Armor() {
     }, []);
     return (
         <div className={styles.container}>
+            <Header/>
             <div className={styles.dualdiv}>
                 {
                     data ? (
@@ -36,6 +39,7 @@ export default function Armor() {
                     )
                 }
             </div>
+            <Footer/>
         </div >
     )
 }
