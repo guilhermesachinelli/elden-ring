@@ -8,7 +8,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { ProgressBar } from 'react-loader-spinner'
 
-export default function atividade() {
+export default function eldenClasses() {
     const [dadosApi, setDadosApi] = useState('');
 
     useEffect(() => {
@@ -21,17 +21,29 @@ export default function atividade() {
             }
         };
         classesFetch();
-    },);
+    },[]);
     return (
         <div className={styles.bckg}>
             <Header />
-            <h3 className={styles.centralizedText}>API de Valorant</h3>
+            <h3 className={styles.centralizedText}>Classes</h3>
             <div className={styles.dualdiv}>
                 {
                 dadosApi ? (
-                    dadosApi.map((item) => (
-                    <div key={item.id}>
-                        <h1 className={styles.centralizedText}>{item.name}</h1>
+                    dadosApi.data.map((classes) => (
+                    <div key={classes.id} className={styles.redcard}>
+                        <h1 className={styles.centralizedText}>{classes.name}</h1>
+                        <img src={classes.image} alt={classes.name} className={styles.image}/>
+                        <div className={styles.statusarea}>
+                            {
+                                classes.stats.map((status) => (
+                                    <div key={status.id} >
+  <p className={styles.centralizedText}>{status.level}</p>
+
+
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div>
                     ))
                 ) : (
