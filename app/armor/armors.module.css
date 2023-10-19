@@ -14,17 +14,16 @@
     padding: 20px;
     box-shadow: 0 0 15px #888585;
     color: white;
-}
-.redcard p {
     font-size: 1.4rem;
     text-align: center;
-    color: white;
 }
 .centralizedText {
     text-align: center;
     color: #AB966F;
     margin-bottom: 10px;
     border-bottom: 3px solid #ab966f;
+    font-family: Medieval;
+    font-size: 3rem;
 }
 
 .dualdiv {
@@ -40,3 +39,4 @@
     margin: 0 auto;
     margin-top: 1rem;
 }
+
