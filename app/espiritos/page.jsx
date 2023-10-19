@@ -36,13 +36,13 @@ function page() {
                                 </div>
                                 <p className={styles.whitetext}>{spirit.description}</p>
                                 <h1 className={styles.centralizedText2}></h1>
-                                <h4 className={styles.whitetext}>Custo em FP para invocação:</h4>
-                                <p className={styles.whitetext}>{spirit.fpCost}</p>
-                                <h4 className={styles.whitetext}>Custo em HP para invocação:</h4>
-                                <p className={styles.whitetext}>{spirit.hpCost}</p>
+                                <h4 className={styles.whitetext}>Custo em FP para invocação: {spirit.fpCost}</h4>
+                    
+                                <h4 className={styles.whitetext}>Custo em HP para invocação: {spirit.hpCost}</h4>
+                    
                                 <h1 className={styles.centralizedText2}></h1>
-                                <h4 className={styles.whitetext}>Efeitos de invocação:</h4>
-                                <p className={styles.whitetext}>{spirit.effect}</p>
+                                <h4 className={styles.whitetext}>Efeitos de invocação: {spirit.effect}</h4>
+            
                             </div>
                         ))
                     ) : (
