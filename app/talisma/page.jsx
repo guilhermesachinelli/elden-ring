@@ -21,19 +21,18 @@ function page() {
     }, []);
 
     return (
-        <div className={styles.box}>
+        <div className={styles.bckg}>
 
             {dadosApi ? (
                 dadosApi.data.map((agente) => (
                     <div
-                        key={agente.id} className={styles.box}
-                    >
-                        <div className={styles.title}>
+                        key={agente.id} className={styles.redcard} >
+                        <h1 className={styles.centralizedText}></h1>
                             <h2>{agente.name}</h2>
-                        </div>
                         <div className={styles.image}>
                             <img src={agente.image} alt={agente.name} width={256} height={256}></img>
                         </div>
+                        
                         <div className={styles.text}>
                             <p>{agente.description}</p>
                         </div>
