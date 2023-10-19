@@ -20,8 +20,8 @@ export default function Armor() {
     }, []);
     return (
         <div className={styles.container}>
+            <Header />
             <h1 className={styles.centralizedText}>Armaduras</h1>
-            <Header/>
             <div className={styles.dualdiv}>
                 {
                     data ? (
@@ -30,7 +30,7 @@ export default function Armor() {
                                 <p className={styles.centralizedText}>{boss.name}</p>
                                 <p>{boss.description}</p>
                                 <p>{boss.type}</p>
-                                <img src={boss.image} alt={boss.name}  className={styles.image} width={250} />
+                                <img src={boss.image} alt={boss.name} className={styles.image} width={250} />
                             </div>
                         ))
                     ) : (
@@ -40,7 +40,7 @@ export default function Armor() {
                     )
                 }
             </div>
-            <Footer/>
+            <Footer />
         </div >
     )
 }
