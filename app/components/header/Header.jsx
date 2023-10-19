@@ -8,7 +8,6 @@ const Header = () => {
         <div className={styles.header}>
             <div className={styles.dropdown}>
                 <Image className={styles.dropbtn} src={'/ER_golden_order.webp'} alt={'Menu'} width={74} height={64} ></Image>
-                <h1>Elden Ring </h1>
                 <div className={styles.dropdown_content}>
                     <NavLink rota={'/'} text={'Home'} className={styles.navlink} />
                     <NavLink rota={'/eldenclasses'} text={'Clases'} className={styles.navlink} />
