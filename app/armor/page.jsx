@@ -20,13 +20,14 @@ export default function Armor() {
     }, []);
     return (
         <div className={styles.container}>
+            <h1 className={styles.centralizedText}>Armaduras</h1>
             <Header/>
             <div className={styles.dualdiv}>
                 {
                     data ? (
                         data.data.map((boss) => (
                             <div key={boss.id} className={styles.redcard}>
-                                <h1 className={styles.centralizedText}>{boss.name}</h1>
+                                <p className={styles.centralizedText}>{boss.name}</p>
                                 <p>{boss.description}</p>
                                 <p>{boss.type}</p>
                                 <img src={boss.image} alt={boss.name}  className={styles.image} width={250} />

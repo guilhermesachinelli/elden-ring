@@ -8,3 +8,7 @@
     text-decoration: none;
   color : white;
 }
+@font-face {
+  font-family: 'Medieval';
+  src: url('../fonts/medieval.otf');
+}
