@@ -1,0 +1,59 @@
+'use client'
+
+import { useEffect, useState } from "react";
+import criaturas from "@/data/criaturas";
+
+import styles from './criaturas.module.css'
+
+
+function page() {
+    const [dadosApi, setDadosApi] = useState(null);
+
+    useEffect(() => {
+        const criaturasFetch = async () => {
+            try {
+                const dados = await criaturas();
+                setDadosApi(dados);
+                console.log(dados);
+            } catch (e) {
+                throw e;
+            }
+        };
+        criaturasFetch();
+    }, []);
+
+    return (
+        <div className={styles.bckg}>
+            <h3 className={styles.centralizedTextTitle}>Criaturas:</h3>
+            <div className={styles.dualdiv}>
+                {
+                    dadosApi ? (
+
+                        dadosApi.data.map((creature) => (
+
+                            <div key={creature.id} className={styles.bigcard}>
+                                <h1 className={styles.centralizedText}>{creature.name}</h1>
+
+                                <img src={creature.image} alt={creature.name} width={256} height={256} className={styles.image}></img>
+
+                                <p className={styles.whitetext}>{creature.description}</p>
+                                <h1 className={styles.centralizedText2}></h1>
+                                <h4 className={styles.whitetext}>Local:</h4>
+                                <p className={styles.whitetext}>{creature.location}</p>
+                                <h1 className={styles.centralizedText2}></h1>
+                                <h4 className={styles.whitetext}>Drops:</h4>
+                                <p className={styles.whitetext}>{creature.drops}</p>
+                            </div>
+
+                        ))
+                    ) : (
+                        <p>Carregando criaturas...</p>
+                    )
+                }
+            </div>
+
+        </div>
+    )
+}
+
+export default page;
