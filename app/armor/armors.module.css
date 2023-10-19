@@ -1,0 +1,42 @@
+.container {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+}
+
+.redcard {
+    background-color: #222222b0;
+    width: 40%;
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #888585;
+    color: white;
+}
+.redcard p {
+    font-size: 1.4rem;
+    text-align: center;
+    color: white;
+}
+.centralizedText {
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+}
+
+.dualdiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.image {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
