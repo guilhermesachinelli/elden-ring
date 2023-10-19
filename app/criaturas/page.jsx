@@ -38,11 +38,10 @@ function page() {
 
                                 <p className={styles.whitetext}>{creature.description}</p>
                                 <h1 className={styles.centralizedText2}></h1>
-                                <h4 className={styles.whitetext}>Local:</h4>
-                                <p className={styles.whitetext}>{creature.location}</p>
+                                <h4 className={styles.whitetext}>Local: {creature.location}</h4>
                                 <h1 className={styles.centralizedText2}></h1>
-                                <h4 className={styles.whitetext}>Drops:</h4>
-                                <p className={styles.whitetext}>{creature.drops}</p>
+                                <h4 className={styles.whitetext}>Drops: {creature.drops}</h4>
+
                             </div>
 
                         ))
