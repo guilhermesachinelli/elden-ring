@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import talisma from "@/data/Talisma";
 import styles from "./page.module.css";
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -21,6 +23,8 @@ function page() {
 
     return (
         <div className={styles.bckg}>
+            <Header/>
+            <h1 className={styles.centralizedText}>Talismãs</h1>
             <div className={styles.dualdiv}>
             {dadosApi ? (
                 dadosApi.data.map((agente) => (
@@ -38,6 +42,7 @@ function page() {
             )
             }
             </div>
+            <Footer />
         </div>
     )
 }

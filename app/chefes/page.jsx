@@ -3,6 +3,8 @@
 import chefes from "@/data/Chefes";
 import React, { useEffect, useState } from "react";
 import styles from "@/app/chefes/chefes.module.css"
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -22,9 +24,12 @@ function page() {
 
     return (
         <div  className={styles.bckg}> 
+        <Header/>
+        <h1 className={styles.centralizedText}>Chefes</h1>
         <div className={styles.dualdiv}>
 
             {dadosApi ? (
+                
                 dadosApi.data.map((agente) => (
                     <div key={agente.id} className={styles.redcard}>
                         <div>
@@ -45,6 +50,7 @@ function page() {
             )
             }
             </div>
+            <Footer />
         </div>
     )
 }

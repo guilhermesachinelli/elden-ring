@@ -26,6 +26,7 @@ export default function eldenClasses() {
         <div className={styles.bckg}>
             <Header />
             <h1 className={styles.centralizedText}>Classes</h1>
+            <Header/>
             <div className={styles.dualdiv}>
                 {
 
