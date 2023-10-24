@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import criaturas from "@/data/criaturas";
-
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 import styles from './criaturas.module.css'
+import { ProgressBar } from 'react-loader-spinner'
 
 
 function page() {
@@ -25,6 +27,7 @@ function page() {
     return (
         <div className={styles.bckg}>
             <h3 className={styles.centralizedTextTitle}>Criaturas:</h3>
+            <Header/>
             <div className={styles.dualdiv}>
                 {
                     dadosApi ? (
@@ -46,9 +49,18 @@ function page() {
 
                         ))
                     ) : (
-                        <p>Carregando criaturas...</p>
+                        <ProgressBar
+                        height="80"
+                        width="80"
+                        ariaLabel="progress-bar-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="progress-bar-wrapper"
+                        borderColor='#42b883'
+                        barColor='#51E5FF'
+                    />
                     )
                 }
+                <Footer />
             </div>
 
         </div>

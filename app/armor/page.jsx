@@ -4,6 +4,8 @@ import styles from './armors.module.css';
 import eldenBoss from '@/data/eldenRing';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
+import { ProgressBar } from 'react-loader-spinner'
+
 export default function Armor() {
     const [data, setData] = useState('');
     useEffect(() => {
@@ -35,7 +37,15 @@ export default function Armor() {
                         ))
                     ) : (
                         <div>
-                            <h1>Carregando...</h1>
+                            <ProgressBar
+                        height="80"
+                        width="80"
+                        ariaLabel="progress-bar-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="progress-bar-wrapper"
+                        borderColor='#42b883'
+                        barColor='#51E5FF'
+                    />
                         </div >
                     )
                 }
