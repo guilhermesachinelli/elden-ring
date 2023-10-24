@@ -34,14 +34,6 @@ function page() {
                             <div>
                                 <img src={location.image} alt={locations.name} width={256} height={256} className={styles.image}></img>
                             </div>
-                            <p className={styles.whitetext}>{location.description}</p>
-                        </div>
-                    ))
-                ) : (
-                    <p>Carregando API...</p>
-                )
-                }
-
                         <p className={styles.whitetext}>{location.description}</p>
                     </div>
                 ))

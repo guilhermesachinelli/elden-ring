@@ -16,42 +16,42 @@ const NavLink = ({ rota, text, icon }) => {
                 {text}
                 {icon === "faHouse" && (
 
-                    <FontAwesomeIcon icon={faHouse} />
+                    <FontAwesomeIcon icon={faHouse} className={styles.icon} />
                 )
                 }
                 {icon === "faShirt" && (
 
-                    <FontAwesomeIcon icon={faShirt} />
+                    <FontAwesomeIcon icon={faShirt}  className={styles.icon}/>
                 )
                 }
 
                 {icon === "faChessKing" && (
 
-                    <FontAwesomeIcon icon={faChessKing} />
+                    <FontAwesomeIcon icon={faChessKing}  className={styles.icon}/>
                 )
                 }
                 {icon === "faMapLocationDot" && (
 
-                    <FontAwesomeIcon icon={faMapLocationDot} />
+                    <FontAwesomeIcon icon={faMapLocationDot}  className={styles.icon}/>
 
                 )
                 }
                 {icon === "faScroll" && (
 
 
-                    <FontAwesomeIcon icon={faScroll} />
+                    <FontAwesomeIcon icon={faScroll}  className={styles.icon}/>
                 )
                 }
                 {
                     icon === "faRing" && (
 
-                        <FontAwesomeIcon icon={faRing} />
+                        <FontAwesomeIcon icon={faRing}  className={styles.icon}/>
                     )
                 }
                 {
                     icon === "faSkullCrossbones" && (
 
-                        <FontAwesomeIcon icon={faSkullCrossbones} />
+                        <FontAwesomeIcon icon={faSkullCrossbones}  className={styles.icon}/>
                     )
                 }
             </Link>
