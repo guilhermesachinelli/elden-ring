@@ -1,8 +1,7 @@
 'use client'
-
+import React, { useEffect, useState } from "react";
 import talisma from "@/data/Talisma";
-import React, {useEffect, useState} from "react";
-import styles from "@/app/talisma/talisma.module.css"
+import styles from "./page.module.css";
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -22,28 +21,23 @@ function page() {
 
     return (
         <div className={styles.bckg}>
-
+            <div className={styles.dualdiv}>
             {dadosApi ? (
                 dadosApi.data.map((agente) => (
-                    <div
-                        key={agente.id} className={styles.redcard} >
-                        <h1 className={styles.centralizedText}></h1>
-                            <h2>{agente.name}</h2>
-                        <div className={styles.image}>
-                            <img src={agente.image} alt={agente.name} width={256} height={256}></img>
+                    <div key={agente.id}  className={styles.redcard}>
+                        <h2 className={styles.centralizedText}>{agente.name}</h2>
+                        <div>
+                            <img src={agente.image} alt={agente.name} width={256} height={256} className={styles.image}></img>
                         </div>
-                        
-                        <div className={styles.text}>
-                            <p>{agente.description}</p>
-                        </div>
-                        <div className={styles.effect}>
-                        </div>
+                        <p className={styles.whitetext}>{agente.description}</p>
+                        <p className={styles.whitetext}>{agente.effect}</p>
                     </div>
                 ))
             ) : (
                 <p>Carregando API...</p>
             )
             }
+            </div>
         </div>
     )
 }

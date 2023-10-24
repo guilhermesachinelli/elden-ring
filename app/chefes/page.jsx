@@ -37,6 +37,7 @@ function page() {
                             <p className={styles.whitetext}>Região: {agente.region}</p>
                             <p className={styles.whitetext}>Descrição: {agente.description}</p>
                             <p className={styles.whitetext}>Drops: {agente.drops}</p>
+
                         </div>
                     </div>
                 ))
