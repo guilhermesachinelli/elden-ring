@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.content{
+    background-color: var(--Bkg-);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.banner{
+    background-image: url('https://gamemag.ru/images/cache/News/News165320/a521b6d027-2_2780x1200.jpg');
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
