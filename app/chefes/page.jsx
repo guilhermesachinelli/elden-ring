@@ -21,29 +21,22 @@ function page() {
     }, []);
 
     return (
-        <div className={styles.box}>
+        <div  className={styles.bckg}> 
+        <div className={styles.dualdiv}>
 
             {dadosApi ? (
                 dadosApi.data.map((agente) => (
-                    <div
-                        key={agente.id} className={styles.box}
-                    >
-                        <div className={styles.title}>
-                            <h2>{agente.name}</h2>
+                    <div key={agente.id} className={styles.redcard}>
+                        <div>
+                            <h2 className={styles.centralizedText}>{agente.name}</h2>
                         </div>
                         <div className={styles.image}>
-                            <img src={agente.image} alt={agente.name} width={256} height={256}></img>
+                            <img src={agente.image} alt={agente.name} width={256} height={256} className={styles.image}></img>
                         </div>
-                        <div className={styles.region}>
-                            <p>{agente.region}</p>
-                        </div>
-                        <div className={styles.text}>
-                            <p>{agente.description}</p>
-                        </div>
-                        <div className={styles.location}>
-                        </div>
-                        <div className={styles.drops}>
-                            <p>{agente.drops}</p>
+                        <div>
+                            <p className={styles.whitetext}>Região: {agente.region}</p>
+                            <p className={styles.whitetext}>Descrição: {agente.description}</p>
+                            <p className={styles.whitetext}>Drops: {agente.drops}</p>
                         </div>
                     </div>
                 ))
@@ -51,6 +44,7 @@ function page() {
                 <p>Carregando API...</p>
             )
             }
+            </div>
         </div>
     )
 }
