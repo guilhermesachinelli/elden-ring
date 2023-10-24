@@ -27,13 +27,21 @@ function page() {
             <Header/>
             <h3 className={styles.centralizedTextTitle}>Localizações</h3>
             <div className={styles.dualdiv}>
-            {dadosApi ? (
-                dadosApi.data.map((location) => (
-                    <div key={location.id}  className={styles.redcard}>
-                        <h2 className={styles.centralizedText}>{location.name}</h2>
-                        <div>
-                            <img src={location.image} alt={locations.name} width={256} height={256} className={styles.image}></img>
+                {dadosApi ? (
+                    dadosApi.data.map((location) => (
+                        <div key={location.id} className={styles.redcard}>
+                            <h2 className={styles.centralizedText}>{location.name}</h2>
+                            <div>
+                                <img src={location.image} alt={locations.name} width={256} height={256} className={styles.image}></img>
+                            </div>
+                            <p className={styles.whitetext}>{location.description}</p>
                         </div>
+                    ))
+                ) : (
+                    <p>Carregando API...</p>
+                )
+                }
+
                         <p className={styles.whitetext}>{location.description}</p>
                     </div>
                 ))
@@ -50,6 +58,7 @@ function page() {
             )
             }
              <Footer />
+
             </div>
         </div>
     )
