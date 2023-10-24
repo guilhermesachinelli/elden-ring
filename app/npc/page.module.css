@@ -28,6 +28,14 @@
     border-bottom: 3px solid #ab966f;
 }
 
+.centralizedTextTitle {
+    font-size: 30px;
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+}
+
 .image {
     align-items: center;
     justify-content: center;
