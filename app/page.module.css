@@ -13,7 +13,7 @@
 }
 .banner{
     background-image: url('https://gamemag.ru/images/cache/News/News165320/a521b6d027-2_2780x1200.jpg');
-    height: 90vh;
+    height: 45vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,4 +21,119 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Medieval;
+}
+
+.bckg {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+}
+
+.infoJogo{
+    width: 90%;
+    text-align: justify;
+    margin-left: 5vh;
+    display: flex;
+    margin-left: 5vh;
+    margin-left: 6.3rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.title1{
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+    font-family: Medieval;
+    font-size: 3rem;
+}
+
+.infoApi{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5vh;
+    text-align: center;
+    width: 90%;
+    justify-content: center;
+    margin-left: 6.3rem;
+}
+
+.infoCard{
+    background-color: #222222b0;
+    width: 40%;
+    height: 75vh;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 15px #888585;
+    margin-bottom: 1rem;
+}
+
+.title2{
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+    font-family: Medieval;
+    font-size: 3rem;
+}
+
+.imgCard{
+    width: 95%;
+    height: 40vh;
+    margin-left: 10vh;
+    margin-left: 0.7vh;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.CardP{
+    width: 90%;
+    text-align: justify;
+    margin-left: 5vh;
+    margin-top: 3vh;
+    color: white;
+}
+
+.divP{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.P{
+    font-size: 3vh;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.banner{
+    width: 100%;
+}
+
+.video{
+    width: 40%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin-left: 7vh;
+    margin-top: 8vh;
+    margin-right: 7vh;
+}
+
+.info1{
+    width: 43%;
+}
+
+.titleCard{
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+    font-family: Medieval;
+    font-size: 3rem;
 }
