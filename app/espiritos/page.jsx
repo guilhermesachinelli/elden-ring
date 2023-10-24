@@ -3,6 +3,9 @@
 import React, { useEffect, useState } from "react"
 import espiritos from "../../data/espiritos"
 import styles from "@/app/espiritos/espiritos.module.css"
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import { ProgressBar } from 'react-loader-spinner'
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -22,7 +25,9 @@ function page() {
 
     return (
         <div className={styles.bckg}>
-            <h3 className={styles.centralizedTextTitle}>Espíritos:</h3>
+            <Header/>
+            <h3 className={styles.centralizedTextTitle}>Espíritos</h3>
+            
             <div className={styles.dualdiv}>
                 {
                     dadosApi ? (
@@ -46,9 +51,18 @@ function page() {
                             </div>
                         ))
                     ) : (
-                        <p>Carregando espíritos....</p>
+                        <ProgressBar
+                        height="80"
+                        width="80"
+                        ariaLabel="progress-bar-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="progress-bar-wrapper"
+                        borderColor='#42b883'
+                        barColor='#51E5FF'
+                    />
                     )
                 }
+                 <Footer />
             </div>
 
         </div>

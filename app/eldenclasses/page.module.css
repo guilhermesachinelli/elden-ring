@@ -32,6 +32,15 @@
     color: #AB966F;
     margin-bottom: 10px;
     border-bottom: 3px solid #ab966f;
+    font-family: Medieval;
+    font-size: 3rem;
+}
+.nomalCentralizedText{
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+    font-family: Medieval;
 }
 
 .image {

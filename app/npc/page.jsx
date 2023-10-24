@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from "react";
 import npc from "../../data/npc";
 import styles from "./page.module.css";
+import Footer from "../components/footer/Footer";
+import Header from '../components/header/Header';
+import { ProgressBar } from 'react-loader-spinner'
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -21,6 +24,8 @@ function page() {
 
     return (
         <div className={styles.bckg}>
+            <Header/>
+            <h3 className={styles.centralizedTextTitle}>NPC's</h3>
             <div className={styles.dualdiv}>
             {dadosApi ? (
                 dadosApi.data.map((npc) => (
@@ -35,11 +40,22 @@ function page() {
                     </div>
                 ))
             ) : (
-                <p>Carregando API...</p>
+                <ProgressBar
+                height="80"
+                width="80"
+                ariaLabel="progress-bar-loading"
+                wrapperStyle={{}}
+                wrapperClass="progress-bar-wrapper"
+                borderColor='#42b883'
+                barColor='#51E5FF'
+            />
             )
             }
+
             </div>
+            <Footer/>
         </div>
+    
     )
 }
 
