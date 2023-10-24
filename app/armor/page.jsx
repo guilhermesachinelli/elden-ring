@@ -39,6 +39,7 @@ export default function Armor() {
                         </div >
                     )
                 }
+                
             </div>
             <Footer />
         </div >

@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react"
 import espiritos from "../../data/espiritos"
-import styles from "@/app/espiritos/espiritos.module.css"
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -23,6 +24,7 @@ function page() {
     return (
         <div className={styles.bckg}>
             <h3 className={styles.centralizedTextTitle}>Espíritos:</h3>
+            <Header/>
             <div className={styles.dualdiv}>
                 {
                     dadosApi ? (
@@ -49,8 +51,9 @@ function page() {
                         <p>Carregando espíritos....</p>
                     )
                 }
+                
             </div>
-
+            <Footer />
         </div>
     )
 }

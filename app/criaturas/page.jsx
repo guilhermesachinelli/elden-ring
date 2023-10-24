@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import criaturas from "@/data/criaturas";
-
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 import styles from './criaturas.module.css'
 
 
@@ -25,6 +26,7 @@ function page() {
     return (
         <div className={styles.bckg}>
             <h3 className={styles.centralizedTextTitle}>Criaturas:</h3>
+            <Header/>
             <div className={styles.dualdiv}>
                 {
                     dadosApi ? (
@@ -49,6 +51,7 @@ function page() {
                         <p>Carregando criaturas...</p>
                     )
                 }
+                <Footer />
             </div>
 
         </div>

@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import locations from "../../data/locations";
 import styles from "./page.module.css";
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -21,6 +23,8 @@ function page() {
 
     return (
         <div className={styles.bckg}>
+            <Header/>
+            <h1 className={styles.centralizedText}>Localizações</h1>
             <div className={styles.dualdiv}>
             {dadosApi ? (
                 dadosApi.data.map((location) => (
@@ -36,6 +40,7 @@ function page() {
                 <p>Carregando API...</p>
             )
             }
+            <Footer />
             </div>
         </div>
     )
