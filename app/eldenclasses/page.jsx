@@ -77,7 +77,7 @@ export default function eldenClasses() {
                      </tbody>
                      </table>
                         </div>
-                        <p className={styles.centralizedText}>{classes.description}</p>
+                        <p className={styles.nomalCentralizedText}>{classes.description}</p>
                     </div>
 
                     ))
