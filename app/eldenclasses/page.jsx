@@ -34,8 +34,6 @@ export default function eldenClasses() {
         changePage(e.target.value)
     }
 
-    
-
     useEffect(() => {
         let ignore = false
         const classesFetch = async () => {
@@ -60,15 +58,10 @@ export default function eldenClasses() {
                     <FontAwesomeIcon icon={faCaretLeft} />
                 </button>
                 <select className={styles.select} onChange={selectPage}>
-                 {
-                        dadosApi ? (
-                            dadosApi.data.lenght((classes) => (
-                                <option value={classes.lenght}>page </option>
-                            ))
-                        ) : (
-                            <option value="0">Loading...</option>
-                        )
-                 }
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">4</option>
                 </select>
                 <button className={styles.btn} onClick={nextPage}>
                     <FontAwesomeIcon icon={faCaretRight} />
