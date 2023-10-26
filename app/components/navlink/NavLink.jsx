@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from './NavLink.module.css';
+import styles from './NavLink.module.css'; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faShirt } from "@fortawesome/free-solid-svg-icons";
