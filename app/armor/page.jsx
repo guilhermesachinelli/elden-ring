@@ -107,6 +107,7 @@ export default function Armor() {
                                 <button onClick={() => handleRemoveItem(armor.id)}>Remover</button>
                                 <button onClick={() => handleEditItem(armor.id)}>Editar</button>
                             </div>
+
                         ))
                     ) : (
                         <div>

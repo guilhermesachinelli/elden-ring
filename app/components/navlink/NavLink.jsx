@@ -4,10 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faShirt } from "@fortawesome/free-solid-svg-icons";
 import { faChessKing } from "@fortawesome/free-solid-svg-icons";
-import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { faScroll } from "@fortawesome/free-solid-svg-icons";
-import { faRing } from "@fortawesome/free-solid-svg-icons";
-import { faSkullCrossbones } from "@fortawesome/free-solid-svg-icons";
+import { faEarthEurope } from "@fortawesome/free-solid-svg-icons";
+import { faFolderTree } from "@fortawesome/free-solid-svg-icons";
+import { faJediOrder } from "@fortawesome/free-brands-svg-icons";
+import { faKhanda } from "@fortawesome/free-solid-svg-icons";
+import { faWandSparkles } from "@fortawesome/free-solid-svg-icons";
+import { faDAndD } from "@fortawesome/free-brands-svg-icons";
+import { faStreetView } from "@fortawesome/free-solid-svg-icons";
+import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 
 const NavLink = ({ rota, text, icon }) => {
     return (
@@ -21,39 +25,64 @@ const NavLink = ({ rota, text, icon }) => {
                 }
                 {icon === "faShirt" && (
 
-                    <FontAwesomeIcon icon={faShirt}  className={styles.icon}/>
+                    <FontAwesomeIcon icon={faShirt} className={styles.icon} />
                 )
                 }
 
                 {icon === "faChessKing" && (
 
-                    <FontAwesomeIcon icon={faChessKing}  className={styles.icon}/>
+                    <FontAwesomeIcon icon={faChessKing} className={styles.icon} />
                 )
                 }
-                {icon === "faMapLocationDot" && (
+                {icon === "faEarthEurope" && (
 
-                    <FontAwesomeIcon icon={faMapLocationDot}  className={styles.icon}/>
+                    <FontAwesomeIcon icon={faEarthEurope} className={styles.icon} />
 
                 )
                 }
-                {icon === "faScroll" && (
+                {icon === "faFolderTree" && (
 
 
-                    <FontAwesomeIcon icon={faScroll}  className={styles.icon}/>
+                    <FontAwesomeIcon icon={faFolderTree} className={styles.icon} />
                 )
                 }
                 {
-                    icon === "faRing" && (
+                    icon === "faJediOrder" && (
 
-                        <FontAwesomeIcon icon={faRing}  className={styles.icon}/>
+                        <FontAwesomeIcon icon={faJediOrder} className={styles.icon} />
                     )
                 }
                 {
-                    icon === "faSkullCrossbones" && (
+                    icon === "faKhanda" && (
 
-                        <FontAwesomeIcon icon={faSkullCrossbones}  className={styles.icon}/>
+                        <FontAwesomeIcon icon={faKhanda} className={styles.icon}/>
                     )
                 }
+                                {
+                    icon === "faWandSparkles" && (
+
+                        <FontAwesomeIcon icon={faWandSparkles} className={styles.icon}/>
+                    )
+                }
+                {
+                    icon === "faDAndD" && (
+
+                        <FontAwesomeIcon icon={faDAndD} className={styles.icon}/>
+                    )
+                }
+                {
+                    icon === "faStreetView" && (
+
+                        <FontAwesomeIcon icon={faStreetView} className={styles.icon}/>
+                    )
+                }
+                {
+                    icon === "faPeopleGroup" && (
+
+                        <FontAwesomeIcon icon={faPeopleGroup} className={styles.icon}/>
+                    )
+                }
+
             </Link>
         </div>
     );

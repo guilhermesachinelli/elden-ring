@@ -26,7 +26,14 @@
     color: #AB966F;
     margin-bottom: 10px;
     border-bottom: 3px solid #ab966f;
-    font-family: medieval;
+}
+
+.centralizedTextTitle {
+    font-size: 30px;
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
 }
 
 .image {
@@ -41,6 +48,4 @@
 .whitetext {
     color: #fff;
     text-align: center;
-    margin-top: 60px;
-    font-size: 20px;
 }

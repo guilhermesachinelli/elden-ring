@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { ProgressBar } from 'react-loader-spinner'
+import CardLocation from "../components/cardLocations/CardLocations";
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -29,13 +30,7 @@ function page() {
             <div className={styles.dualdiv}>
                 {dadosApi ? (
                     dadosApi.data.map((location) => (
-                        <div key={location.id} className={styles.redcard}>
-                            <h2 className={styles.centralizedText}>{location.name}</h2>
-                            <div>
-                                <img src={location.image} alt={locations.name} width={256} height={256} className={styles.image}></img>
-                            </div>
-                        <p className={styles.whitetext}>{location.description}</p>
-                    </div>
+                        <CardLocation id={location.id} name={location.name} image={location.image} description={location.description}></CardLocation>
                 ))
             ) : (
                 <ProgressBar

@@ -20,14 +20,16 @@ const Header = () => {
             </div>
             <ul className={styles.menuItems}>
                 <NavLink rota="/" text={"Home"} icon={"faHouse"}/>
-                <NavLink rota="/eldenclasses" text={"Classes"} icon={"faScroll"}/>
-                <NavLink rota="/locations" text={"Locais"} icon={"faMapLocationDot"}/>
-                <NavLink rota="/chefes" text={"Bosses"} icon={"faChessKing"}/>
-                <NavLink rota="/armas" text={"Armas"} icon={"faSkullCrossbones"}/>
+                <NavLink rota="/eldenclasses" text={"Classes"} icon={"faFolderTree"}/>
+                <NavLink rota="/armas" text={"Armas"} icon={"faKhanda"}/>
                 <NavLink rota="/armor" text={"Armaduras"} icon={"faShirt"}/>
-                <NavLink rota="/talisma" text={"Talismã"} icon={"faRing"}/>
-
-
+                <NavLink rota="/talisma" text={"Talismã"} icon={"faJediOrder"}/>
+                <NavLink rota="/locations" text={"Locais"} icon={"faEarthEurope"}/>
+                <NavLink rota="/cinzas" text={"Cinzas"} icon={"faWandSparkles"}/>
+                <NavLink rota="/npc" text={"NPCs"} icon={"faPeopleGroup"}/>
+                <NavLink rota="/chefes" text={"Bosses"} icon={"faChessKing"}/>
+                <NavLink rota="/criaturas" text={"Criaturas"} icon={"faDAndD"}/>
+                <NavLink rota="/espiritos" text={"Espiritos"} icon={"faStreetView"}/>
             </ul>
         </div>
     );

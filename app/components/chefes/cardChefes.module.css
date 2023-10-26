@@ -26,7 +26,6 @@
     color: #AB966F;
     margin-bottom: 10px;
     border-bottom: 3px solid #ab966f;
-    font-family: medieval;
 }
 
 .image {
@@ -41,6 +40,4 @@
 .whitetext {
     color: #fff;
     text-align: center;
-    margin-top: 60px;
-    font-size: 20px;
 }
