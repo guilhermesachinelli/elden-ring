@@ -17,12 +17,8 @@
     color: #f4f4f4;
 }
 
-.menu {
-    display: flex;
-}
-
 .direitos {
-    background-color: #ab966f;
+    background-color: #000000;
     margin-top: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
