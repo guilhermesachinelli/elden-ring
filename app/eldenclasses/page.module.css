@@ -19,12 +19,18 @@
 .redcard {
     background-color: #222222b0;
     width: 40%;
-    height: 89vh;
+    height: 95vh;
     margin: 0 auto;
     margin-top: 5%;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 15px #888585;
+}
+
+.redcard:hover{
+    box-shadow: 0 0 15px #ab966f;
+    transition: 1s;
+
 }
 
 .centralizedText {
@@ -52,6 +58,13 @@
     margin-bottom: 20px;
     box-shadow: 0 0 15px #2d2d2d;
 }
+
+.image:hover{
+    box-shadow: 0 0 15px #ab966f;
+    transition: 1s;
+
+}
+
 
 .dualdiv {
     display: flex;

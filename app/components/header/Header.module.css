@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .sideMenu.open {
@@ -33,4 +34,6 @@
     display: flex;
     flex-direction: column;
     left: 0;
+    overflow-y: auto;
+    height: 100%;
 }
