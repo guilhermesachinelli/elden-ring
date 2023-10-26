@@ -46,7 +46,7 @@ function page() {
                                 <h4 className={styles.whitetext}>Custo em HP para invocação: {spirit.hpCost}</h4>
                     
                                 <h1 className={styles.centralizedText2}></h1>
-                                <h4 className={styles.whitetext}>Efeitos de invocação: {spirit.effect}</h4>
+                                <h4 className={styles.whitetext}>Efeito de invocação: {spirit.effect}</h4>
             
                             </div>
                         ))
