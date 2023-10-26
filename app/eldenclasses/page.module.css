@@ -57,6 +57,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
 .statusarea {
@@ -84,4 +85,36 @@
 .table {
     width: 50%;
     margin-bottom: 10px;
+}
+
+.btn{
+    background-color: #AB966F;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Medieval;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+}
+.select{
+    background-color: #AB966F;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Medieval;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.btnarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
 }
