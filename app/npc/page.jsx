@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Footer from "../components/footer/Footer";
 import Header from '../components/header/Header';
 import { ProgressBar } from 'react-loader-spinner'
+import CardNPC from "../components/cardNPC/CardNPC";
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -29,15 +30,7 @@ function page() {
             <div className={styles.dualdiv}>
             {dadosApi ? (
                 dadosApi.data.map((npc) => (
-                    <div key={npc.id}  className={styles.redcard}>
-                        <h2 className={styles.centralizedText}>{npc.name}</h2>
-                        <div>
-                            <img src={npc.image} alt={npc.name} width={256} height={256} className={styles.image}></img>
-                        </div>
-                        <p className={styles.whitetext}>{npc.quote}</p>
-                        <p className={styles.whitetext}>{npc.location}📍</p>
-                        <p className={styles.whitetext}>{npc.role}</p>
-                    </div>
+                    <CardNPC id={npc.id} name={npc.name} image={npc.image} quote={npc.quote} location={npc.location} role={npc.role}/>
                 ))
             ) : (
                 <ProgressBar

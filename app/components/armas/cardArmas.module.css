@@ -1,0 +1,46 @@
+.bckg {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+}
+
+.dualdiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.redcard {
+    background-color: #222222b0;
+    width: 40%;
+    height: 75vh;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #888585;
+}
+
+.centralizedText {
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+    font-family: medieval;
+}
+
+.image {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.whitetext {
+    color: #fff;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 20px;
+}

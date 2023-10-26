@@ -6,6 +6,7 @@ import styles from "@/app/armas/armas.module.css";
 import { ProgressBar } from 'react-loader-spinner'
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
+import CardArma from "../components/armas/cardArmas";
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -28,22 +29,9 @@ function page() {
             <Header/>
             <h1 className={styles.centralizedText}>Armas</h1>
         <div className={styles.dualdiv}>
-        
-
             {dadosApi ? (
                 dadosApi.data.map((agente) => (
-                    <div
-                        key={agente.id} className={styles.redcard}>
-                            <div>
-                            <h2 className={styles.centralizedText}>{agente.name}</h2>
-                            </div>
-                        <div className={styles.image}>
-                            <img src={agente.image} alt={agente.name} width={256} height={256}></img>
-                        </div>
-                        <div className={styles.whitetext}>
-                            <p>{agente.description}</p>
-                        </div>
-                    </div>
+                   <CardArma id={agente.id} image={agente.image} description={agente.description}></CardArma>
                 ))
             ) : (
                 <ProgressBar

@@ -6,6 +6,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
 import { ListItens } from '@/models/ListItens';
+import CardArmor from '../components/armor/CardArmor';
 
 const listItens = new ListItens();
 
@@ -78,12 +79,7 @@ export default function Armor() {
                 {
                     armors ? (
                         armors.map((boss) => (
-                            <div key={boss.id} className={styles.redcard}>
-                                <p className={styles.centralizedText}>{boss.name}</p>
-                                <p>{boss.description}</p>
-                                <p>{boss.type}</p>
-                                <img src={boss.image} alt={boss.name} className={styles.image} width={250} />
-                            </div>
+                            <CardArmor id={boss.id} name={boss.name} image={boss.image} description={boss.description}></CardArmor>
                         ))
                     ) : (
                         <div>

@@ -1,4 +1,4 @@
-import styles from './cardIndex.module.css';
+import styles from './cardIndex.module.css'
 
 const CardIndex = ({categoria, link, texto}) => {
     return (
