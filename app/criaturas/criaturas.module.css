@@ -37,6 +37,7 @@
     color: #AB966F;
     margin-bottom: 10px;
     border-bottom: 3px solid #ab966f;
+    font-family: 'Medieval';
 }
 
 .centralizedTextTitle {
@@ -45,6 +46,7 @@
     color: #AB966F;
     margin-bottom: 10px;
     border-bottom: 3px solid #ab966f;
+    font-family: 'Medieval';
 }
 
 .centralizedText2 {
@@ -52,6 +54,7 @@
     color: #AB966F;
     margin-bottom: 5px;
     border-bottom: 3px solid #ab966f;
+    font-family: 'Medieval';
     margin-bottom: 10px;
     margin-top: 10px;
 }

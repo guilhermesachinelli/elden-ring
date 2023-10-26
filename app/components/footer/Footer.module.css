@@ -18,6 +18,14 @@
     color: #f4f4f4;
 }
 
+.direitos {
+    background-color: #000000;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+}
+
 .socialmedia {
     display: flex;
     justify-content: center;
