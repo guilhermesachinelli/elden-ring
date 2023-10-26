@@ -262,3 +262,37 @@ Esta rota suporta os seguintes parâmetros:
 | limit     | 20           | https://eldenring.fanapis.com/api/spirits?limit=100 | Define a quantidade máxima de itens na resposta |
 | page      | 0            | https://eldenring.fanapis.com/api/spirits?limit=20&page=3 | Navega entre páginas de resultados         |
 | name      | Nenhum       | https://eldenring.fanapis.com/api/spirits?name=Demi-human%20Ashes | Pesquisa campos por seus nomes            |
+
+
+## Rota dos Talismãs
+
+### #Introdução
+
+Esta rota busca uma lista de todos os talismãs que podem ser obtidos em Elden Ring e gera isso no formato JSON. O usuário pode definir sua própria paginação e também utilizar consultas de pesquisa para encontrar a saída desejada.
+
+### #Esquema
+
+| ATRIBUTO  | TIPO    | DESCRIÇÃO                                   |
+|-----------|---------|---------------------------------------------|
+| id     | string  | Id do Talismã                               |
+| name      | string  | Nome do Talismã                             |
+| image    | string  | URL da imagem do ícone Talismã             |
+| description | string  | Breve descrição do Talismã                 |
+| effects   | string  | O que acontece quando equipamos este Talismã |
+
+### #Rotas
+
+| MÉTODO | URL                                              | DESCRIÇÃO                                          |
+|--------|--------------------------------------------------|----------------------------------------------------|
+| GET    | https://eldenring.fanapis.com/api/talismans       | Recupera uma lista de todos os talismãs de Elden Ring |
+| GET    | https://eldenring.fanapis.com/api/talismans/:talisman_id | Recupera um talismã Elden Ring usando seu ID |
+
+### #Parâmetros
+
+Esta rota suporta os seguintes parâmetros:
+
+| Parâmetro | Valor Padrão | URL de Exemplo                                     | DESCRIÇÃO                                  |
+|-----------|--------------|---------------------------------------------------|--------------------------------------------|
+| limit     | 20           | https://eldenring.fanapis.com/api/talismans?limit=100 | Define a quantidade máxima de itens na resposta |
+| page      | 0            | https://eldenring.fanapis.com/api/talismans?limit=20&page=3 | Navega entre páginas de resultados         |
+| name      | Nenhum       | https://eldenring.fanapis.com/api/talismans?name=Axe%20Talisman | Pesquisa campos por seus nomes            |
