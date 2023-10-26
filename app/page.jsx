@@ -5,6 +5,7 @@ import next from "next";
 import Image from "next/image";
 import Header from "./components/header/Header";
 import styles from "./page.module.css"
+import CardIndex from "./components/cardIndex/CardIndex";
 
 export default function Home() {
   return (
@@ -15,22 +16,22 @@ export default function Home() {
       </div>
       <div className={styles.infoJogo}>
         <div className={styles.info1}>
-        <h1 className={styles.title1}>Conheça o jogo:</h1>
-        <p className={styles.P}>
-          Elden Ring é um jogo de RPG de ação desenvolvido pela FromSoftware e publicado pela Bandai Namco Entertainment.
-          Ele foi altamente antecipado devido à colaboração entre o escritor George R.R. Martin (conhecido por "A Song of Ice and Fire")
-          e o diretor de jogos Hidetaka Miyazaki.
+          <h1 className={styles.title1}>Conheça o jogo:</h1>
+          <p className={styles.P}>
+            Elden Ring é um jogo de RPG de ação desenvolvido pela FromSoftware e publicado pela Bandai Namco Entertainment.
+            Ele foi altamente antecipado devido à colaboração entre o escritor George R.R. Martin (conhecido por "A Song of Ice and Fire")
+            e o diretor de jogos Hidetaka Miyazaki.
 
-          O jogo se passa em um mundo de fantasia chamado "The Lands Between" e oferece um vasto mundo aberto para explorar. Os jogadores
-          assumem o papel de um personagem criado por eles e embarcam em uma jornada para desvendar segredos, derrotar inimigos e chefes
-          desafiadores, e coletar objetos mágicos.
+            O jogo se passa em um mundo de fantasia chamado "The Lands Between" e oferece um vasto mundo aberto para explorar. Os jogadores
+            assumem o papel de um personagem criado por eles e embarcam em uma jornada para desvendar segredos, derrotar inimigos e chefes
+            desafiadores, e coletar objetos mágicos.
 
-          Elden Ring é conhecido por seu combate desafiador e pela narrativa rica, incorporando elementos de mitologia e fantasia sombria.
-          Além disso, o jogo oferece montarias que podem ser usadas para explorar o mundo aberto e travar batalhas épicas.
-        </p>
+            Elden Ring é conhecido por seu combate desafiador e pela narrativa rica, incorporando elementos de mitologia e fantasia sombria.
+            Além disso, o jogo oferece montarias que podem ser usadas para explorar o mundo aberto e travar batalhas épicas.
+          </p>
         </div>
         <div className={styles.video}>
-            <img src="/introgif.gif"></img>
+          <img src="/introgif.gif"></img>
         </div>
       </div>
       <h1 className={styles.title2}>O que você vai encontrar em nosso site?</h1>

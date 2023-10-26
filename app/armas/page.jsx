@@ -2,7 +2,11 @@
 
 import armas from "@/data/Armas";
 import React, {useEffect, useState} from "react";
-import styles from "@/app/armas/armas.module.css"
+import styles from "@/app/armas/armas.module.css";
+import { ProgressBar } from 'react-loader-spinner'
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import CardArma from "../components/armas/cardArmas";
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -21,30 +25,28 @@ function page() {
     }, []);
 
     return (
-        <div className={styles.box}>
-
+        <div className={styles.bckg}>
+            <Header/>
+            <h1 className={styles.centralizedText}>Armas</h1>
+        <div className={styles.dualdiv}>
             {dadosApi ? (
                 dadosApi.data.map((agente) => (
-                    <div
-                        key={agente.id} className={styles.box}
-                    >
-                        <div className={styles.title}>
-                            <h2>{agente.name}</h2>
-                        </div>
-                        <div className={styles.image}>
-                            <img src={agente.image} alt={agente.name} width={256} height={256}></img>
-                        </div>
-                        <div className={styles.text}>
-                            <p>{agente.description}</p>
-                        </div>
-                        <div className={styles.attack}>
-                        </div>
-                    </div>
+                   <CardArma id={agente.id} image={agente.image} description={agente.description}></CardArma>
                 ))
             ) : (
-                <p>Carregando API...</p>
+                <ProgressBar
+                        height="80"
+                        width="80"
+                        ariaLabel="progress-bar-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="progress-bar-wrapper"
+                        borderColor='#42b883'
+                        barColor='#51E5FF'
+                    />
             )
             }
+            </div>
+            <Footer/>
         </div>
     )
 }

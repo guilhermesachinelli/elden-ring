@@ -6,6 +6,7 @@ import styles from "@/app/chefes/chefes.module.css"
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { ProgressBar } from 'react-loader-spinner'
+import CardChefes from "../components/chefes/CardChefes";
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -32,19 +33,7 @@ function page() {
             {dadosApi ? (
                 
                 dadosApi.data.map((agente) => (
-                    <div key={agente.id} className={styles.redcard}>
-                        <div>
-                            <h2 className={styles.centralizedText}>{agente.name}</h2>
-                        </div>
-                        <div className={styles.image}>
-                            <img src={agente.image} alt={agente.name} width={256} height={256} className={styles.image}></img>
-                        </div>
-                        <div>
-                            <p className={styles.whitetext}>Região:{agente.region}</p>
-                            <p className={styles.whitetext}>Descrição:{agente.description}</p>
-                            <p className={styles.whitetext}>Drops:{agente.drops}</p>
-                        </div>
-                    </div>
+                    <CardChefes id={agente.id} name={agente.name} image={agente.image} region={agente.region} description={agente.description} drops={agente.drops}></CardChefes>
                 ))
             ) : (
                 <ProgressBar

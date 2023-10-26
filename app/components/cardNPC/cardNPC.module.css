@@ -1,30 +1,7 @@
-.container {
+.bckg {
     background-color: #000;
     height: 100%;
-    width: 95.8%;
-    margin-left: 4.2%;
-}
-
-.redcard {
-    background-color: #222222b0;
-    width: 40%;
-    height: 60vh;
-    margin: 0 auto;
-    margin-top: 5%;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 15px #888585;
-    color: white;
-    font-size: 1.4rem;
-    text-align: center;
-}
-.centralizedText {
-    text-align: center;
-    color: #AB966F;
-    margin-bottom: 10px;
-    border-bottom: 3px solid #ab966f;
-    font-family: Medieval;
-    font-size: 3rem;
+    width: 100%;
 }
 
 .dualdiv {
@@ -33,11 +10,42 @@
     flex-direction: row;
 }
 
+.redcard {
+    background-color: #222222b0;
+    width: 40%;
+    height: 80vh;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px #888585;
+}
+
+.centralizedText {
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+}
+
+.centralizedTextTitle {
+    font-size: 30px;
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+}
+
 .image {
     align-items: center;
     justify-content: center;
     display: flex;
     margin: 0 auto;
-    margin-top: 1rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
+.whitetext {
+    color: #fff;
+    text-align: center;
+}
