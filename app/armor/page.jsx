@@ -6,7 +6,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
 import { ListItens } from '@/models/ListItens';
-
+import { Item } from '@/models/eldenRing';
 const listItens = new ListItens();
 
 
@@ -33,22 +33,22 @@ export default function Armor() {
     useEffect(() => {
         if (api && api.data) {
             api.data.forEach((item) => {
-                const newItem = new Armor(item.name, item.image, item.description, item.category);
+                const newItem = new Item(item.name, item.image, item.description, item.category);
                 listItens.addItem(newItem);
             }
             );
-            const updateItemList = [...armors, ...listItens.showItens()];
+            const updateItemList = [...armors, ...listItens.getItem()];
             setArmors(updateItemList);
         }
     }, [api])
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        const armor = new Armor(name, image, description, category);
+        const armor = new Item(name, image, description, category);
         if (!name && !image && !description && !category) {
             alert('Todos os campos são obrigatórios');
             return;
         } else {
-            const updateList = [...listItens, armor];
+            const updateList = [...listItens.getItem(), armor];
             setArmors(updateList);
             listItens.addItem(armor)
             setName('');
@@ -61,7 +61,6 @@ export default function Armor() {
 
     return (
         <div className={styles.container}>
-            <Header />
             <h1 className={styles.centralizedText}>Armaduras</h1>
             <form onSubmit={handleFormSubmit}>
                 <label>Nome</label>
@@ -88,14 +87,14 @@ export default function Armor() {
                     ) : (
                         <div>
                             <ProgressBar
-                        height="80"
-                        width="80"
-                        ariaLabel="progress-bar-loading"
-                        wrapperStyle={{}}
-                        wrapperClass="progress-bar-wrapper"
-                        borderColor='#42b883'
-                        barColor='#51E5FF'
-                    />
+                                height="80"
+                                width="80"
+                                ariaLabel="progress-bar-loading"
+                                wrapperStyle={{}}
+                                wrapperClass="progress-bar-wrapper"
+                                borderColor='#42b883'
+                                barColor='#51E5FF'
+                            />
                         </div >
                     )
                 }

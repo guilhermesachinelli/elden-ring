@@ -1,4 +1,4 @@
-class Item {
+export class Item {
     constructor(name, image, description , category){
         this.id = this.ramdonId();
         this.name = name;
