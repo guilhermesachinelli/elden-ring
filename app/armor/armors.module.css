@@ -1,7 +1,8 @@
 .container {
     background-color: #000;
     height: 100%;
-    width: 100%;
+    width: 95.8%;
+    margin-left: 4.2%;
 }
 
 .redcard {
