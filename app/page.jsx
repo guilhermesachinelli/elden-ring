@@ -95,8 +95,8 @@ export default function Home() {
           <h2 className={styles.titleCard}>NPC´s</h2>
           <img src="https://primagames.com/wp-content/uploads/2022/03/Knight-Bernahl-quest-Elden-Ring.jpg" className={styles.imgCard}></img>
           <div className={styles.divP}>
-          <p className={styles.CardP}>(Personagem Não-Jogável). Esses são personagens não são controlados pelo
-            jogador. Em vez disso, eles são controlados pela inteligência artificial do jogo e desempenham papéis variados na narrativa, na jogabilidade e
+          <p className={styles.CardP}>(Personagem Não-Jogável). Esses são personagens que não são controlados pelo
+            jogador. Em vez disso, são controlados pela inteligência artificial do jogo e desempenham papéis variados na narrativa, na jogabilidade e
             na interação com o jogador.
           </p>
           </div>
