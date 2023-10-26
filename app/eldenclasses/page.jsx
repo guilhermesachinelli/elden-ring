@@ -9,6 +9,7 @@ import Footer from '../components/footer/Footer';
 import { ProgressBar } from 'react-loader-spinner'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function eldenClasses() {
     const [dadosApi, setDadosApi] = useState('');
