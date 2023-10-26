@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { ProgressBar } from 'react-loader-spinner'
+import CardTalisma from "@/app/components/talisma/CardTalisma"
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -28,15 +29,8 @@ function page() {
             <h3 className={styles.centralizedTextTitle}>Talismã</h3>
             <div className={styles.dualdiv}>
             {dadosApi ? (
-                dadosApi.data.map((agente) => (
-                    <div key={agente.id}  className={styles.redcard}>
-                        <h2 className={styles.centralizedText}>{agente.name}</h2>
-                        <div>
-                            <img src={agente.image} alt={agente.name} width={256} height={256} className={styles.image}></img>
-                        </div>
-                        <p className={styles.whitetext}>{agente.description}</p>
-                        <p className={styles.whitetext}>{agente.effect}</p>
-                    </div>
+                dadosApi.data.map((talisma) => (
+                  <CardTalisma id={talisma.id} name={talisma.name} image={talisma.image} description={talisma.description} effect={talisma.effect}/>
                 ))
             ) : (
                 <ProgressBar
