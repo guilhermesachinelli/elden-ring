@@ -26,6 +26,7 @@ const Header = () => {
                 <NavLink rota="/armas" text={"Armas"} icon={"faSkullCrossbones"}/>
                 <NavLink rota="/armor" text={"Armaduras"} icon={"faShirt"}/>
                 <NavLink rota="/talisma" text={"Talismã"} icon={"faRing"}/>
+                
 
 
             </ul>
