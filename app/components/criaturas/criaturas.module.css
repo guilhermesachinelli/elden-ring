@@ -1,0 +1,63 @@
+.bckg {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.dualdiv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.bigcard {
+    background-color: #222222b0;
+    width: 35rem;
+    min-height: 38rem;
+    max-height: 38rem;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 15px #888585;
+}
+
+.centralizedText {
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+}
+
+.centralizedTextTitle {
+    font-size: 30px;
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ab966f;
+}
+
+.centralizedText2 {
+    text-align: center;
+    color: #AB966F;
+    margin-bottom: 5px;
+    border-bottom: 3px solid #ab966f;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.whitetext {
+    color: #fff;
+    padding: 0.2rem;
+}
