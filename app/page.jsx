@@ -110,6 +110,14 @@ export default function Home() {
             ou lançar feitiços e habilidades mágicas.</p>
             </div>
         </div>
+        <div className={styles.infoCard}>
+      <h2 className={styles.titleCard}>Itens</h2>
+      <img src="https://media.karousell.com/media/photos/products/2022/4/16/elden_ring__runes_and_items_ps_1650103850_a003bb18_progressive.jpg" className={styles.imgCard}></img>
+      <div className={styles.divP}>
+      <p className={styles.CardP}>são itens necessários para zerar a campanha. Ao serem equipadas, elas ainda garantem bônus de atributos e outras vantagens.
+       É possível obtê-las ao derrotar Semideuses — os chefes principais do jogo </p>
+       </div>
+      </div>
       </div>
     </div>
   )
