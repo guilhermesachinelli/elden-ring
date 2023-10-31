@@ -2,6 +2,13 @@ export class ListItens {
     constructor() {
         this.itens = [];
     }
+
+    // Crie um metodo que retorna apenas os 4 primeiros itens do array
+    getFirstItens() {
+        return this.itens.slice(0, 4);
+    }
+
+
     addItem(item) {
         this.itens.push(item);
     }
