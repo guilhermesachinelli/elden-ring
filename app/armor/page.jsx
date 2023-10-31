@@ -1,13 +1,15 @@
 "use client";
 import { useState, useEffect } from 'react';
 import styles from './armors.module.css';
-import eldenBoss from '@/data/eldenRing';
+import eldenBoss, { changePage } from '@/data/eldenRing';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { ListItens } from '@/models/ListItens';
 import { Item } from '@/models/eldenRing';
-const listItens = new ListItens();
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretLeft } from '@fortawesome/free-solid-svg-icons'
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+const listItens = new ListItens();   
 
 export default function Armor() {
     const [armors, setArmors] = useState([]);
@@ -18,6 +20,28 @@ export default function Armor() {
     const [search, setSearch] = useState('');
     const [flag, setFlag] = useState(0);
     const [editButton, setEditButton] = useState(false);
+    const [pageNumber, setPageNumber] = useState(0);
+
+    const nextPage = () => {
+        setPageNumber(pageNumber + 1)
+        changePage(pageNumber)
+        
+    }
+
+    const prevPage = () => {
+        if (pageNumber <= 0) {
+            return
+        } else {
+            setPageNumber(pageNumber - 1)
+            changePage(pageNumber)
+        }
+    }
+
+    const selectPage = (e) => {
+        setPageNumber(e.target.value)
+        changePage(e.target.value)
+    }
+
     useEffect(() => {
         let ignore = false;
         const bossFecth = async () => {
@@ -46,7 +70,7 @@ export default function Armor() {
             const updateItemList = [...armors, ...listItens.getItem()];
             setArmors(updateItemList);
         }
-    }, [api])
+    }, [api, pageNumber])
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const armor = new Item(name, image, description);
@@ -76,7 +100,7 @@ export default function Armor() {
         setFlag(id)
     }
     const update = () => {
-        listItens.updateItem(flag ,name, image, description );
+        listItens.updateItem(flag, name, image, description);
         setEditButton(false);
     }
     return (
@@ -94,6 +118,20 @@ export default function Armor() {
                 {editButton ? <button onClick={update}>Editar Armadura</button> : null}
             </form>
             <input type="text" value={search} placeholder="Pesquise uma Armadura" onChange={(e) => setSearch(e.target.value)} />
+            <div className={styles.btnarea}>
+                <button className={styles.btn} onClick={prevPage}>
+                    <FontAwesomeIcon icon={faCaretLeft} />
+                </button>
+                <select className={styles.select} onChange={selectPage}>
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">4</option>
+                </select>
+                <button className={styles.btn} onClick={nextPage}>
+                    <FontAwesomeIcon icon={faCaretRight} />
+                </button>
+            </div>
             <div className={styles.dualdiv}>
                 {
                     armors ? (
