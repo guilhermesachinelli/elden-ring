@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from "./components/header/Header";
 import styles from "./page.module.css"
 import CardIndex from "./components/cardIndex/CardIndex";
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
   return (
@@ -119,6 +120,7 @@ export default function Home() {
        </div>
       </div>
       </div>
+      <Footer />
     </div>
   )
 }
