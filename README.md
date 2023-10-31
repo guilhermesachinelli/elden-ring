@@ -339,7 +339,7 @@ Esta rota suporta os seguintes parâmetros:
 
 
 # Equipe
-### Contacte-nos no GitHub!
+### Entre em contato conosco pelo GitHub!
 
 #### - Amanda Silva
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=LINK_GIT)](https://github.com/Amandamoonchild)
@@ -362,7 +362,3 @@ Esta rota suporta os seguintes parâmetros:
 ## Feedback
 
 Se você tiver algum feedback, por favor nos deixe saber por meio deste email amandasilva@aluno.senai.br.
-
-
-
-
