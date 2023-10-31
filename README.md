@@ -13,13 +13,11 @@ Para começar a utilizar essa API e entender melhor o projeto, siga os passos ab
 
 1. Em seu projeto, utilize o comando "npm install axios" no terminal para fazer a instalação da parte mais importante do nosso projeto, pois sem ele, a URL da API utilizada não se torna útil. 
 
-
 2. Ainda em seu projeto, crie uma pasta nomeada como "data" e dentro dela, adicione um arquivo em JavaScript (.js) com um nome coerente à página do site. No exemplo abaixo, nomeamos nosso arquivo como "armas" já que nossa página foca nisso:
 
 <center>
 <img src="./public/arquivo data ex.png" width="200" height="130">
 </center>
-
 
 3. Agora precisamos fazer a importação da biblioteca Axios, definir a URL da API sendo utilizada e declarar uma função assíncrona, que em nosso exemplo, seria "armas".
 
@@ -34,7 +32,6 @@ O "catch (error) serve para caso ocorra um erro durante a solicitação à API, 
 ## Recursos da API:
 
 Link do site oficial: https://docs.eldenring.fanapis.com/docs/bosses
-
 
 ## Rota dos Chefes:
 
@@ -118,7 +115,7 @@ Esta rota busca uma lista de todas as cinzas de guerra que podem ser encontradas
 | MÉTODO | URL                                      | DESCRIÇÃO                                     |
 |--------|------------------------------------------|-----------------------------------------------|
 | GET    | https://eldenring.fanapis.com/api/ashes  | Recupera uma lista de todas as Cinzas de Guerra presentes em Elden Ring |
-| GET    | https://eldenring(fanapis.com/api/ashes/:ash_of_war_id | Recupera uma Cinza de Guerra usando seu ID |
+| GET    | https://eldenringfanapis.com/api/ashes/:ash_of_war_id | Recupera uma Cinza de Guerra usando seu ID |
 
 ### #Parâmetros
 Esta rota suporta os seguintes parâmetros:
@@ -339,6 +336,9 @@ Esta rota suporta os seguintes parâmetros:
 
 
 # Equipe
+
+Somos um grupo de estudantes que estão no segundo semestre do curso técnico de desenvolvimento de sistemas no SENAI de Valinhos, e gostaríamos de compartilhar um projeto que criamos com base no que aprendemos até agora. Nosso objetivo com esta documentação é mostrar como aplicamos as habilidades que adquirimos no SENAI para solucionar problemas e criar .
+
 ### Entre em contato conosco pelo GitHub!
 
 #### - Amanda Silva
