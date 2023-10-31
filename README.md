@@ -1,7 +1,37 @@
-## API – ELDEN RING 
+# <div align="center">API – ELDEN RING</div>
+
+
+## 💻 Seja muito bem-vindo!
+#### Esta documentação fornecerá informações abrangentes sobre como usar a nossa API e apresentará o nosso projeto em detalhes.
 
 ### O que é?
-Essa é uma API de código aberto que fornece informações sobre o jogo “Elden Ring” lançado pela FromSoftware em 2022. Nesta seção, você será guiado pelas etapas básicas sobre como usar esta API corretamente. Esta API é aberta, portanto não requer uma chave de API para usá-la. 
+
+Essa é uma API de código aberto que fornece informações sobre o jogo “Elden Ring” lançado pela FromSoftware em 2022. Nesta seção, você será guiado pelas etapas básicas sobre como usar esta API corretamente. Esta API é aberta, portanto não requer uma chave de API para usá-la.
+
+### Começando
+Para começar a utilizar essa API e entender melhor o projeto, siga os passos abaixo:
+
+1. Em seu projeto, utilize o comando "npm install axios" no terminal para fazer a instalação da parte mais importante do nosso projeto, pois sem ele, a URL da API utilizada não se torna útil. 
+
+
+2. Ainda em seu projeto, crie uma pasta nomeada como "data" e dentro dela, adicione um arquivo em JavaScript (.js) com um nome coerente à página do site. No exemplo abaixo, nomeamos nosso arquivo como "armas" já que nossa página foca nisso:
+
+<center>
+<img src="./public/arquivo data ex.png" width="200" height="130">
+</center>
+
+
+3. Agora precisamos fazer a importação da biblioteca Axios, definir a URL da API sendo utilizada e declarar uma função assíncrona, que em nosso exemplo, seria "armas".
+
+<center>
+<img src="./public/pagina axios ex.png" width="290" height="160">
+</center>
+
+Dentro do bloco try, a função faz uma solicitação GET à URL da API usando o Axios e armazena a resposta na variável resposta. O await é usado para aguardar que a solicitação seja concluída antes de continuar a execução, depois a função retorna os dados da resposta da API. Presumivelmente, a API retorna dados sobre armas em formato JSON, e resposta.data contém esses dados.
+
+O "catch (error) serve para caso ocorra um erro durante a solicitação à API, o código captura o erro e o lança novamente, tornando-o acessível para tratamento posterior.
+
+## Recursos da API:
 
 Link do site oficial: https://docs.eldenring.fanapis.com/docs/bosses
 
@@ -296,3 +326,43 @@ Esta rota suporta os seguintes parâmetros:
 | limit     | 20           | https://eldenring.fanapis.com/api/talismans?limit=100 | Define a quantidade máxima de itens na resposta |
 | page      | 0            | https://eldenring.fanapis.com/api/talismans?limit=20&page=3 | Navega entre páginas de resultados         |
 | name      | Nenhum       | https://eldenring.fanapis.com/api/talismans?name=Axe%20Talisman | Pesquisa campos por seus nomes            |
+
+
+## Documentação de cores oficiais do site
+
+| Cor               | Hexadecimal                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Cor Cinza escuro       | ![#222222B0](https://via.placeholder.com/10/222222B0?text=+) #222222B0 |
+| Cor  Preta      | ![#0B2123](https://via.placeholder.com/10/0B2123?text=+) #0B2123 |
+| Cor Cappuccino       | ![#AB966F](https://via.placeholder.com/10/AB966F?text=+) #AB966F |
+| Cor Branca      | ![#fff](https://via.placeholder.com/10/fff?text=+) #fff |
+
+
+# Equipe
+### Contacte-nos no GitHub!
+
+#### - Amanda Silva
+[![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=LINK_GIT)](https://github.com/Amandamoonchild)
+                                                    
+#### - Andrey Castro 
+[![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=LINK_GIT)](https://github.com/andreyfdecastro)                         
+
+
+#### - Guilherme Lima
+[![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=LINK_GIT)](https://github.com/GuiLimaSeila)
+
+
+#### - Guilherme Sachinelli
+[![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=LINK_GIT)](https://github.com/guilhermesachinelli)
+
+#### - Nicolly Santos
+[![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=LINK_GIT)](https://github.com/santni)
+
+
+## Feedback
+
+Se você tiver algum feedback, por favor nos deixe saber por meio deste email amandasilva@aluno.senai.br.
+
+
+
+
