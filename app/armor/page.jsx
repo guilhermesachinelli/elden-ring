@@ -78,6 +78,9 @@ export default function Armor() {
     const update = () => {
         listItens.updateItem(flag ,name, image, description );
         setEditButton(false);
+        setName('');
+        setImage('');
+        setDescription('');
     }
     return (
         <div className={styles.container}>
@@ -93,7 +96,6 @@ export default function Armor() {
                 <button type="submit">Adicionar Armadura</button>
                 {editButton ? <button onClick={update}>Editar Armadura</button> : null}
             </form>
-            <input type="text" value={search} placeholder="Pesquise uma Armadura" onChange={(e) => setSearch(e.target.value)} />
             <div className={styles.dualdiv}>
                 {
                     armors ? (
