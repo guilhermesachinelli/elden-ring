@@ -12,6 +12,7 @@ import { faWandSparkles } from "@fortawesome/free-solid-svg-icons";
 import { faDAndD } from "@fortawesome/free-brands-svg-icons";
 import { faStreetView } from "@fortawesome/free-solid-svg-icons";
 import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
+import { faGem } from "@fortawesome/free-regular-svg-icons"
 
 const NavLink = ({ rota, text, icon }) => {
     return (
@@ -80,6 +81,12 @@ const NavLink = ({ rota, text, icon }) => {
                     icon === "faPeopleGroup" && (
 
                         <FontAwesomeIcon icon={faPeopleGroup} className={styles.icon}/>
+                    )
+                }
+                {
+                    icon === "faGem" &&(
+
+                        <FontAwesomeIcon icon={faGem} className={styles.icon}/>
                     )
                 }
 

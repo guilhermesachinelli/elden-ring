@@ -30,6 +30,7 @@ const Header = () => {
                 <NavLink rota="/chefes" text={"Bosses"} icon={"faChessKing"}/>
                 <NavLink rota="/criaturas" text={"Criaturas"} icon={"faDAndD"}/>
                 <NavLink rota="/espiritos" text={"Espiritos"} icon={"faStreetView"}/>
+                <NavLink rota="/ItemsER" text={"Items"} icon={"faGem"} />
             </ul>
         </div>
     );
