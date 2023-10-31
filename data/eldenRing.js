@@ -1,11 +1,5 @@
 import axios from "axios";
-let URL = 'https://eldenring.fanapis.com/api/armors?limit=4'
-
-
-export function changePage(page) {
-    URL = `https://eldenring.fanapis.com/api/armors?limit=4&ppage=${page}`
-    return URL;
-}
+let URL = 'https://eldenring.fanapis.com/api/armors?'
 
 const eldenBoss = async () => {
     try{
