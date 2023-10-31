@@ -6,6 +6,7 @@ import styles from './cinzas.module.css'
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { ProgressBar } from 'react-loader-spinner'
+import CardCinzas from "../components/cinzas/CardCinzas";
 
 function page() {
     const [dadosApi, setDadosApi] = useState(null);
@@ -34,25 +35,10 @@ function page() {
                         dadosApi.data.map((ash) =>
                             ash.image ?
                                 (
-                                    <div key={ash.id} className={styles.bigcard}>
-                                        <h1 className={styles.centralizedText}>{ash.name}</h1>
-                                        <div>
-                                            <img src={ash.image} alt={ash.name} width={256} height={256} className={styles.image}></img>
-                                        </div>
-                                        <p className={styles.whitetext}>{ash.description}</p>
-                                        <h1 className={styles.centralizedText2}></h1>
-                                        <h4 className={styles.affinity}>Afinidade: {ash.affinity}</h4>
-
-                                        <h1 className={styles.centralizedText2}></h1>
-                                        <h4 className={styles.skill}>Habilidade ativada: {ash.skill}</h4>
-
-                                    </div>
-
-
+                                    <CardCinzas id={ash.id} name={ash.name} image={ash.image} description={ash.description} affinity={ash.affinity} skill={ash.skill}></CardCinzas>
                                 ) : (
                                     null
                                 )
-
                         )
                     ) : (
                         <ProgressBar

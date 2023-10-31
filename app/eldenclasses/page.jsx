@@ -10,6 +10,7 @@ import { ProgressBar } from 'react-loader-spinner'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+import CardClasses from '../components/cardClasses/CardClasses';
 
 export default function eldenClasses() {
     const [dadosApi, setDadosApi] = useState('');
@@ -74,55 +75,7 @@ export default function eldenClasses() {
 
                     dadosApi ? (
                         dadosApi.data.map((classes) => (
-                            <div key={classes.id} className={styles.redcard}>
-                                <h1 className={styles.centralizedText}>{classes.name}</h1>
-                                <img src={classes.image} alt={classes.name} className={styles.image} />
-                                <div className={styles.statusarea}>
-                                    <table className={styles.table}>
-                                        <tbody className={styles.tbody}>
-                                            <tr className={styles.tr}>
-                                                <td className={styles.whitetext}>
-                                                    Level: {classes.stats.level}
-                                                </td>
-                                            </tr>
-                                            <tr className={styles.tr}>
-                                                <td className={styles.whitetext}>
-                                                    Vigor: {classes.stats.vigor}
-                                                </td>
-                                                <td className={styles.whitetext}>
-                                                    Destreza: {classes.stats.dexterity}
-                                                </td>
-                                            </tr>
-                                            <tr className={styles.tr}>
-                                                <td className={styles.whitetext}>
-                                                    Mente: {classes.stats.mind}
-                                                </td>
-                                                <td className={styles.whitetext}>
-                                                    Inteligencia: {classes.stats.intelligence}
-                                                </td>
-                                            </tr>
-                                            <tr className={styles.tr}>
-                                                <td className={styles.whitetext}>
-                                                    Resistência : {classes.stats.endurance}
-                                                </td>
-                                                <td className={styles.whitetext}>
-                                                    Fé : {classes.stats.faith}
-                                                </td>
-                                            </tr>
-                                            <tr className={styles.tr}>
-                                                <td className={styles.whitetext}>
-                                                    Força  : {classes.stats.strength}
-                                                </td>
-                                                <td className={styles.whitetext}>
-                                                    Arcano : {classes.stats.arcane}
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <p className={styles.nomalCentralizedText}>{classes.description}</p>
-
-                            </div>
+                            <CardClasses id={classes.id} name={classes.id} image={classes.image} level={classes.stats.level} vigor={classes.stats.vigor} dexterity={classes.stats.dexterity} mind={classes.stats.mind} intelligence={classes.stats.intelligence} endurance={classes.stats.endurance} faith={classes.stats.faith} strength={classes.stats.strength} arcane={classes.stats.arcane} description={classes.stats.description}></CardClasses>
 
                         ))
                     ) : (
