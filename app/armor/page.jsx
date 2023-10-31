@@ -50,7 +50,6 @@ export default function Armor() {
                 const response = await eldenBoss();
                 if (!ignore) {
                     setApi(response);
-                    setSliceAmors(listItens.getFirstItens())
                 }
             } catch (error) {
                 throw error;
@@ -74,6 +73,8 @@ export default function Armor() {
 
         }
     }, [api])
+
+
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const armor = new Item(name, image, description);
