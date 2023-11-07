@@ -93,6 +93,7 @@ export default function Armor() {
     const handleRemoveItem = (id) => {
         const updateList = [...listItens.getItem()].filter((item) => item.id !== id);
         setArmors(updateList);
+        setSliceAmors(updateList);
         listItens.removeItem(id);
     }
     const handleEditItem = (id) => {
@@ -142,8 +143,8 @@ export default function Armor() {
                                 <p>{armor.description}</p>
                                 <p>{armor.type}</p>
                                 <img src={armor.image} alt={armor.name} className={styles.image} width={250} />
-                                <button onClick={() => handleRemoveItem(armor.id)}>Remover</button>
-                                <button onClick={() => handleEditItem(armor.id)}>Editar</button>
+                                <button onClick={() => handleRemoveItem(armor.id)} className={styles.btn}>Remover</button>
+                                <button onClick={() => handleEditItem(armor.id)} className={styles.btn}>Editar</button>
                             </div>
 
                         ))
