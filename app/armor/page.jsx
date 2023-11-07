@@ -113,16 +113,17 @@ export default function Armor() {
         <div className={styles.container}>
             <Header />
             <h1 className={styles.centralizedText}>Armaduras</h1>
-            <form onSubmit={handleFormSubmit}>
-                <label>Nome</label>
-                <input type="text" value={name} placeholder="Digite um nome para a Armadura" onChange={(e) => setName(e.target.value)} />
-                <label>Imagem</label>
-                <input type="text" value={image} placeholder="coloque uma imagem" onChange={(e) => setImage(e.target.value)} />
-                <label>Descrição</label>
-                <input type="text" value={description} placeholder="Adicione uma Descrição" onChange={(e) => setDescription(e.target.value)} />
-                {editButton ? <button onClick={update}>Editar Armadura</button> : <button type="submit">Adicionar Armadura</button>}
+            <form onSubmit={handleFormSubmit} className={styles.formarea}>
+                <label className={styles.label}>Nome</label>
+                <input type="text" value={name} placeholder="Digite um nome para a Armadura" onChange={(e) => setName(e.target.value)} className={styles.input}/>
+                <label className={styles.label}>Imagem</label>
+                <input type="text" value={image} placeholder="coloque uma imagem" onChange={(e) => setImage(e.target.value)} className={styles.input}/>
+                <label className={styles.label}>Descrição</label>
+                <input type="text" value={description} placeholder="Adicione uma Descrição" onChange={(e) => setDescription(e.target.value)} className={styles.input}/>
+                {editButton ? <button onClick={update} className={styles.btn}>Editar Armadura</button> : <button type="submit" className={styles.btn}>Adicionar Armadura</button>}
+                <input type="text" value={search} placeholder="Pesquise uma Armadura" onChange={(e) => setSearch(e.target.value)} className={styles.input}/>
             </form>
-            <input type="text" value={search} placeholder="Pesquise uma Armadura" onChange={(e) => setSearch(e.target.value)} />
+
             <div className={styles.btnarea}>
                 <button className={styles.btn} onClick={prevPage}>
                     <FontAwesomeIcon icon={faCaretLeft} />
