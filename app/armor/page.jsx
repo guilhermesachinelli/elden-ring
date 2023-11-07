@@ -9,6 +9,7 @@ import { Item } from '@/models/eldenRing';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretLeft } from '@fortawesome/free-solid-svg-icons'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+import PopupMessage from '../components/popUp/PopUp';
 const listItens = new ListItens();
 
 export default function Armor() {
@@ -22,6 +23,9 @@ export default function Armor() {
     const [editButton, setEditButton] = useState(false);
     const [sliceArmors, setSliceAmors] = useState(listItens.getFirstItens());
     const [pageNumber, setPageNumber] = useState(0);
+    const [showPopup, setShowPopup] = useState(false);
+    const [popupMessage, setPopupMessage] = useState('');
+    const [popupType, setPopupType] = useState('');
 
     let limit = armors.length;
 
@@ -78,8 +82,8 @@ export default function Armor() {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const armor = new Item(name, image, description);
-        if (!name && !image && !description && !category) {
-            alert('Todos os campos são obrigatórios');
+        if (!name && !image && !description) {
+            handleShowPopup('Preencha todos os campos', 'error', 4000)
             return;
         } else {
             const updateList = [...listItens.getItem(), armor];
@@ -88,6 +92,7 @@ export default function Armor() {
             setName('');
             setImage('');
             setDescription('');
+            handleShowPopup('Armadura Adicionada com sucesso', 'success', 4000)
         }
     }
     const handleRemoveItem = (id) => {
@@ -107,9 +112,19 @@ export default function Armor() {
     const update = () => {
         listItens.updateItem(flag, name, image, description);
         setEditButton(false);
+        setName('');
+        setImage('');
+        setDescription('');
+        handleShowPopup('Armadura Editada com sucesso', 'success', 4000)
     }
-    console.log("Slice");
-    console.log(sliceArmors);
+    const handleShowPopup = (message, type, time) => {
+        setPopupMessage(message)
+        setPopupType(type)
+        setShowPopup(true)
+        setTimeout(() => {
+            setShowPopup(false)
+        }, time)
+    }
     return (
         <div className={styles.container}>
             <Header />
@@ -163,6 +178,11 @@ export default function Armor() {
                     )
                 }
             </div>
+            {
+                showPopup ? (
+                    <PopupMessage message={popupMessage} type={popupType} />
+                ) : null
+            }
             <Footer />
         </div >
     )
