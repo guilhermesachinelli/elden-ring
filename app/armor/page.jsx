@@ -4,6 +4,7 @@ import styles from './armors.module.css';
 import eldenBoss from '@/data/eldenRing';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
+import { CubeSpinner } from "react-spinners-kit";
 import { ListItens } from '@/models/ListItens';
 import { Item } from '@/models/eldenRing';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -96,9 +97,9 @@ export default function Armor() {
         }
     }
     const handleRemoveItem = (id) => {
-        const updateList = [...listItens.getItem()].filter((item) => item.id !== id);
-        setArmors(updateList);
-        setSliceAmors(updateList);
+        const updateArmors = [...armors].filter((item) => item.id !== id);
+        setArmors(updateArmors);
+        setSliceAmors(updateArmors.slice(pageNumber, pageNumber + 4))
         listItens.removeItem(id);
     }
     const handleEditItem = (id) => {
@@ -165,15 +166,7 @@ export default function Armor() {
                         ))
                     ) : (
                         <div>
-                            <ProgressBar
-                                height="80"
-                                width="80"
-                                ariaLabel="progress-bar-loading"
-                                wrapperStyle={{}}
-                                wrapperClass="progress-bar-wrapper"
-                                borderColor='#42b883'
-                                barColor='#51E5FF'
-                            />
+<CubeSpinner size={25} frontColor="#00ff89" backColor="#686769" sizeUnit="px" loading={true}/>
                         </div >
                     )
                 }
