@@ -337,7 +337,7 @@ Esta rota suporta os seguintes parâmetros:
 
 # Equipe
 
-Somos um grupo de estudantes que estão no segundo semestre do curso técnico de desenvolvimento de sistemas no SENAI de Valinhos, e gostaríamos de compartilhar um projeto que criamos com base no que aprendemos até agora. Nosso objetivo com esta documentação é mostrar como aplicamos as habilidades que adquirimos no SENAI para solucionar problemas e criar .
+Somos um grupo de estudantes que estão no segundo semestre do curso técnico de desenvolvimento de sistemas no SENAI de Valinhos, e gostaríamos de compartilhar um projeto que criamos com base no que aprendemos até agora. Nosso objetivo com esta documentação é mostrar como aplicamos as habilidades que adquirimos no SENAI para solucionar problemas e criar.
 
 ### Entre em contato conosco pelo GitHub!
 
